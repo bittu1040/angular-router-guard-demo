@@ -1,0 +1,42 @@
+/* Base styles for the navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.nav .left,
+.nav .right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav .left,
+  .nav .right {
+    margin: 10px 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    background-color: #007bff;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+}

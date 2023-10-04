@@ -1,0 +1,12 @@
+<div class="main">
+  <div>
+    <div>This is products page</div>
+    <div class="description" *ngIf="routeGuardName.length > 0">
+      You are learning {{ routeGuardName }}
+    </div>
+    <div>
+      Implemented resolve route guard here so that's why it took time to load. because I have given 3 second time
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

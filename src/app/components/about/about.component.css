@@ -1,0 +1,11 @@
+.main {
+  text-align: center;
+}
+
+.main .description {
+  color: #ff2fd2;
+}
+
+.center{
+cursor: pointer;
+}
