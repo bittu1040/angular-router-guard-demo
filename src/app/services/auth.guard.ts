@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  userRole = 'admin';
+  userRole = 'adminm';
 
   constructor(private router: Router) {}
   canActivate(
