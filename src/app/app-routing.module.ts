@@ -10,6 +10,9 @@ import { RoleGuard } from './services/role.guard';
 import { AdminComponent } from './components/admin/admin.component';
 import { EditAboutComponent } from './components/edit-about/edit-about.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { NotCompleteGuard } from './services/not-completed.guard';
+import { ModuleGuard } from './services/module.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +27,17 @@ const routes: Routes = [
     component: AboutComponent,
     canActivateChild: [RoleGuard],
     children: [{ path: 'edit', component: EditAboutComponent }],
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    canDeactivate: [NotCompleteGuard]
+  },
+  {
+    path: 'offers',
+    canLoad: [ModuleGuard],
+    loadChildren: () =>
+      import('./components/offers/offers.module').then((m) => m.OffersModule),
   },
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'access-denied', component: AccessDeniedComponent },

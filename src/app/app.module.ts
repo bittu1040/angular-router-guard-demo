@@ -16,6 +16,9 @@ import { EditAboutComponent } from './components/edit-about/edit-about.component
 import { RoleGuard } from './services/role.guard';
 import { AdminComponent } from './components/admin/admin.component';
 import { AuthGuard } from './services/auth.guard';
+import { ContactComponent } from './components/contact/contact.component';
+import { OffersComponent } from './components/offers/offers.component';
+import { OffersModule } from './components/offers/offers.module';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
@@ -29,6 +32,8 @@ import { AuthGuard } from './services/auth.guard';
     AboutComponent,
     EditAboutComponent,
     AdminComponent,
+    ContactComponent,
+    OffersComponent,
   ],
   providers: [DataService, RoleGuard, AuthGuard],
   bootstrap: [AppComponent],
