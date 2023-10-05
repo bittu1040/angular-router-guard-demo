@@ -40,3 +40,12 @@
     border-bottom: none;
   }
 }
+
+@media (max-width: 356px) {
+  .nav-item {
+    margin: 10px 0;
+    background-color: #007bff;
+    padding: 4px;
+    border-bottom: 1px solid #fff;
+  }
+}
