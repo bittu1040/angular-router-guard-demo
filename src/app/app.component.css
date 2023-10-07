@@ -13,3 +13,7 @@ p {
   .content {
     margin: 20px;
   }
+
+  li{
+    padding: 10px;
+  }
